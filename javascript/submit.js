@@ -14,6 +14,7 @@ function submitProduct(object){
         }
         if(this.responseText=='success!'){
             alert("Producto registrado correctamente.")
+            location.reload();
         }
         
     }

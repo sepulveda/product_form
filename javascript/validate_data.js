@@ -1,5 +1,6 @@
-function validateData(){
+function validateData(e){
 
+    e.preventDefault();
     const product_code =document.getElementById("product_code").value
     const product_name =document.getElementById("product_name").value
     const product_price = document.getElementById("product_price").value
@@ -168,3 +169,5 @@ function validateDescription(desc){
     }
     return isValid
 }
+
+document.getElementById('submitBtn')?.addEventListener("click", validateData);

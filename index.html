@@ -3,7 +3,7 @@
 <head>
     <link rel="stylesheet" href="styles.css"></link>
     <script src="javascript/fetch_data.js"></script>
-    <script src="javascript/validate_data.js"></script>
+    
     <script src="javascript/submit.js"></script>
 
 </head>
@@ -12,7 +12,7 @@
         <div class="form_title">
             <p>Formulario de producto</p>
         </div>
-        <form class="product_form" id="product_data" onsubmit="validateData()">
+        <form class="product_form" id="product_data" >
             <div class="product_form_group">
                 <div>
                     <label for="product_code" class="label_top">Código</label>
@@ -82,13 +82,13 @@
             </div>
             
 
-            <button type="submit" class="submit_button">Guardar producto</button>
+            <button type="submit" id="submitBtn" class="submit_button">Guardar producto</button>
 
 
         </form>
         
 
     </div>
-
+    <script src="javascript/validate_data.js"></script>
 </body>
 </html>
