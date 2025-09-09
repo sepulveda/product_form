@@ -10,11 +10,13 @@ function submitProduct(object){
             alert("El código del producto ya está registrado.")
         }
         if(this.responseText=='An error occurred.'){
+            
             alert("Ocurrió un error, intente nuevamente.")
         }
         if(this.responseText=='success!'){
             alert("Producto registrado correctamente.")
         }
+        console.log(this.responseText)
         
     }
     xhttp.send("data="+JSON.stringify(object));

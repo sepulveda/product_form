@@ -11,13 +11,14 @@
     $product_price = $decoded_json->product_price;
     $product_materials = $decoded_json->product_materials;
     $product_description = $decoded_json->product_description;
-
+    
    $connection = pg_pconnect($conn_string);
 
     if (!$connection) {
-        echo "An error occurred.";
+        echo "An error occurred. on connection";
         exit;
     }
+
     $query = "INSERT INTO osj_schema.product VALUES ( '$product_code', '$product_name', '$product_price', ARRAY[$product_materials], '$product_description', '$product_branch', '$product_currency');";
     if (pg_send_query($connection,$query)){
 
@@ -35,7 +36,8 @@
                 echo "duplicate error";
             }
             else {
-                echo "An error occurred.";
+               
+                echo "An error occurred. on saving";
             // process other errors
             }
             }
