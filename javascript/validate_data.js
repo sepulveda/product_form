@@ -1,5 +1,5 @@
 function validateData(){
-    
+
     const product_code =document.getElementById("product_code").value
     const product_name =document.getElementById("product_name").value
     const product_price = document.getElementById("product_price").value
