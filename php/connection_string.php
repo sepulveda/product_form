@@ -1,0 +1,1 @@
+<?php $conn_string = "host=[YOUR HOST HERE] port=[YOUR PORT HERE] dbname=[YOUR DB HERE] user=[YOUR USER HERE] password=[YOUR PASSWORD HERE]";

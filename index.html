@@ -1,0 +1,94 @@
+
+<html>
+<head>
+    <link rel="stylesheet" href="styles.css"></link>
+    <script src="javascript/fetch_data.js"></script>
+    <script src="javascript/validate_data.js"></script>
+    <script src="javascript/submit.js"></script>
+
+</head>
+<body onload="fetchInitialData()">
+    <div class="form_container">
+        <div class="form_title">
+            <p>Formulario de producto</p>
+        </div>
+        <form class="product_form" id="product_data" onsubmit="validateData()">
+            <div class="product_form_group">
+                <div>
+                    <label for="product_code" class="label_top">Código</label>
+                    <input type="text" id="product_code" class="styled_inputs"/>
+                </div>
+                
+                <div>
+                    <label for="product_name" class="label_top">Nombre</label>
+                    <input type="text" id="product_name" class="styled_inputs" />
+
+                </div>
+                
+                <div>
+                    <label for="warehouses" class="label_top">Bodega</label>
+                    <select onchange="getBranchesData()" id="warehouses" class="styled_inputs">
+                        <option value="">Seleccione una bodega...</option>
+                    </select>
+                </div>
+                
+                <div>
+                    <label for="branches" class="label_top">Sucursal</label>
+                    <select id="branches" class="styled_inputs">
+                        <option value="">Seleccione una sucursal...</option>
+                    </select>
+                </div>
+                
+                <div>
+                    <label for="currency" class="label_top">Moneda</label>
+                    <select id="currency" class="styled_inputs">
+                        <option value="">Seleccione una moneda...</option>
+                    </select>
+                </div>
+                
+                <div>
+                    <label for="product_price" class="label_top" >Precio</label>
+                    <input type="text" id="product_price" class="styled_inputs"/>
+                </div>
+                
+
+            </div>
+            
+            <div class="checkbox_group_container">
+                <label for="checkbox_group" class="label_top">Material del producto</label>
+                <div id="checkbox_group">
+                    <input type="checkbox" id="has_plastic" value="has_plastic"/>
+                    <label for="has_plastic">Plástico</label>
+
+                    <input type="checkbox" id="has_metal" value="has_metal"/>
+                    <label for="has_metal">Metal</label>
+
+                    <input type="checkbox" id="has_wood" value="has_wood"/>
+                    <label for="has_wood">Madera</label>
+
+                    <input type="checkbox" id="has_glass" value="has_glass"/>
+                    <label for="has_glass">Vidrio</label>
+
+                    <input type="checkbox" id="has_fabric" value="has_fabric"/>
+                    <label for="has_fabric">Textil</label>
+                </div>
+
+            </div>
+            
+
+            <div class="description_container">
+                <label for="product_description" class="label_top">Descripción</label>
+                <textarea id="product_description" class="textarea_desc"></textarea>
+            </div>
+            
+
+            <button type="submit" class="submit_button">Guardar producto</button>
+
+
+        </form>
+        
+
+    </div>
+
+</body>
+</html>

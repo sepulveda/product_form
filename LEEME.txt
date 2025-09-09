@@ -1,0 +1,23 @@
+ANTES DE EJECUTAR EL PROJECTO:
+Requisitos:
+-Postgres 13.4
+-PHP 8.4
+
+-Preparacion de ambiente
+
+*Postgres:
+	Conectar a base de datos Postgresql
+	Ejecutar archivos en carpeta SQL en orden numérico
+*PHP:
+	En carpeta raiz de PHP en su sistema modificar archivo php.ini, descomentando las lineas (borrando el ;)
+		extension=pgsql
+		extension=pdo_pgsql
+		
+-Preparación de proyecto
+
+	En la carpeta php incluida en el proyecto modificar el archivo connection_string.php con la información de la base de datos donde se creó el esquema y un usuario válido con permisos.
+
+Instalación:
+	Pegar carpeta del proyecto en carpeta servidor (htdocs) o
+	ejectutar php en carpeta del proyecto.
+
